@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>All Restaurants</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Table base styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header row style */
+    thead th {
+      background-color: #007BFF;
+      color: white;
+      text-align: left;
+      padding: 12px 10px;
+      white-space: nowrap;
+    }
+
+    /* Body rows alternate colors */
+    tbody tr:nth-child(odd) {
+      background-color: white;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    /* Cell padding */
+    th, td {
+      padding: 12px 10px;
+      vertical-align: middle;
+    }
+
+    /* Images in table */
+    td img {
+      display: block;
+      max-width: 100px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    /* Edit link style */
+    td a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    td a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+      }
+      thead tr {
+        display: none;
+      }
+      tbody tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+      }
+      tbody td {
+        padding-left: 50%;
+        position: relative;
+        text-align: left;
+      }
+      tbody td::before {
+        position: absolute;
+        left: 10px;
+        top: 12px;
+        white-space: nowrap;
+        font-weight: bold;
+        content: attr(data-label);
+        color: #555;
+      }
+      td img {
+        max-width: 80px;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo" class="logo" />
+      <span class="app-name">Food Ordering System</span>
+    </div>
+    <nav class="header-nav">
+      <button>Profile</button>
+      <button>Logout</button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-container responsive-table">
+    <h1>All Restaurants</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Restaurant No.</th>
+          <th>Restaurant Name</th>
+          <th>Restaurant Image</th>
+          <th>Address</th>
+          <th>Contact</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Restaurant No.">1</td>
+          <td data-label="Restaurant Name">Food Town</td>
+          <td data-label="Restaurant Image">
+            <img src="Restaurant 1" alt="Food Town" width="100"
+                 onerror="this.onerror=null;this.src='https://via.placeholder.com/100?text=Food+Town';" />
+          </td>
+          <td data-label="Address">Abbey Street, Berkshire</td>
+          <td data-label="Contact">27287</td>
+          <td data-label="Edit"><a href="#">Edit</a></td>
+        </tr>
+        <tr>
+          <td data-label="Restaurant No.">2</td>
+          <td data-label="Restaurant Name">Green Leaf Hotel</td>
+          <td data-label="Restaurant Image">
+            <img src="Restaurant 2" alt="Green Leaf Hotel" width="100"
+                 onerror="this.onerror=null;this.src='https://via.placeholder.com/100?text=Green+Leaf';" />
+          </td>
+          <td data-label="Address">Northwest street, Skyville</td>
+          <td data-label="Contact">37484</td>
+          <td data-label="Edit"><a href="#">Edit</a></td>
+        </tr>
+        <tr>
+          <td data-label="Restaurant No.">3</td>
+          <td data-label="Restaurant Name">KingstonHotel</td>
+          <td data-label="Restaurant Image">
+            <img src="Restaurant 3" alt="Kingston Hotel" width="100"
+                 onerror="this.onerror=null;this.src='https://via.placeholder.com/100?text=Kingston';" />
+          </td>
+          <td data-label="Address">Dudley Road, Hillwood</td>
+          <td data-label="Contact">7448</td>
+          <td data-label="Edit"><a href="#">Edit</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <strong>About Us</strong><br />
+        We provide delicious meals and excellent service.
+      </div>
+      <div>
+        <strong>Contact</strong><br />
+        support@foodapp.com<br />
+        +1 234 567 8900
+      </div>
+      <div>
+        <strong>Follow Us</strong><br />
+        Twitter | Facebook | Instagram
+      </div>
+      <div>
+        <strong>© 2025 Food Ordering System</strong>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

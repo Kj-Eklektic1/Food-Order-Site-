@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>All Cuisines</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Table styling - full width, header blue, alternating rows */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    thead tr {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: white;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    table a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    table a:hover {
+      text-decoration: underline;
+    }
+
+    table img {
+      max-width: 100px;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo" class="logo" />
+      <span class="app-name">Food Ordering System</span>
+    </div>
+    <nav class="header-nav">
+      <button>Profile</button>
+      <button>Logout</button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-container responsive-table">
+    <h1>All Cuisines</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Cuisine No.</th>
+          <th>Cuisine Name</th>
+          <th>Description</th>
+          <th>Active?</th>
+          <th>Image</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Cuisine No.">1</td>
+          <td data-label="Cuisine Name">Italian</td>
+          <td data-label="Description">All Italian Food</td>
+          <td data-label="Active?">Yes</td>
+          <td data-label="Image">
+            <img src="italian food.jpg" alt="Italian cuisine" width="100" 
+              onerror="this.onerror=null;this.src='https://via.placeholder.com/100?text=Italian';" />
+          </td>
+          <td data-label="Edit"><a href="#">Edit</a></td>
+        </tr>
+        <tr>
+          <td data-label="Cuisine No.">2</td>
+          <td data-label="Cuisine Name">Asian</td>
+          <td data-label="Description">All Asian foods</td>
+          <td data-label="Active?">Yes</td>
+          <td data-label="Image">
+            <img src="Asian Food.jpg" alt="Asian cuisine" width="100" 
+              onerror="this.onerror=null;this.src='https://via.placeholder.com/100?text=Asian';" />
+          </td>
+          <td data-label="Edit"><a href="#">Edit</a></td>
+        </tr>
+        <tr>
+          <td data-label="Cuisine No.">3</td>
+          <td data-label="Cuisine Name">Chinese</td>
+          <td data-label="Description">All Chinese food</td>
+          <td data-label="Active?">Yes</td>
+          <td data-label="Image">
+            <img src="Chinese Food.jpg" alt="Chinese cuisine" width="100" 
+              onerror="this.onerror=null;this.src='https://via.placeholder.com/100?text=Chinese';" />
+          </td>
+          <td data-label="Edit"><a href="#">Edit</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <strong>About Us</strong><br />
+        We provide delicious meals and excellent service.
+      </div>
+      <div>
+        <strong>Contact</strong><br />
+        support@foodapp.com<br />
+        +1 234 567 8900
+      </div>
+      <div>
+        <strong>Follow Us</strong><br />
+        Twitter | Facebook | Instagram
+      </div>
+      <div>
+        <strong>© 2025 Food Ordering System</strong>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

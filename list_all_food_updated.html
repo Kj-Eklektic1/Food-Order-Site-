@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>All Food Items</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Table styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    thead tr {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Prevent line break for first header cell */
+    th:first-child {
+      white-space: nowrap;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: white;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo" class="logo" />
+      <span class="app-name">Food Ordering System</span>
+    </div>
+    <nav class="header-nav">
+      <button>Profile</button>
+      <button>Logout</button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-container responsive-table">
+    <h1>All Food Items</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Food Item No.</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Available?</th>
+          <th>Vegetarian?</th>
+          <th>Category</th>
+          <th>Cuisine</th>
+          <th>Image</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Food Item No.">1</td>
+          <td data-label="Name">Veg Pizza</td>
+          <td data-label="Description">Veggies include onion, tomato, capsicum etc</td>
+          <td data-label="Available?">Yes</td>
+          <td data-label="Vegetarian?">Yes</td>
+          <td data-label="Category">Pizza</td>
+          <td data-label="Cuisine">Italian</td>
+          <td data-label="Image">
+            <img src="Veg Pizza.jpg" alt="Veg Pizza" width="100" 
+              onerror="this.onerror=null;this.src='https://via.placeholder.com/100?text=Veg+Pizza';" />
+          </td>
+          <td data-label="Edit"><a href="#">Edit</a></td>
+        </tr>
+        <tr>
+          <td data-label="Food Item No.">2</td>
+          <td data-label="Name">Hot & Sour Soup</td>
+          <td data-label="Description">Made with mushrooms, tofu, spring onions & chicken</td>
+          <td data-label="Available?">Yes</td>
+          <td data-label="Vegetarian?">No</td>
+          <td data-label="Category">Soup</td>
+          <td data-label="Cuisine">Chinese</td>
+          <td data-label="Image">
+            <img src="Hot & Sour Soup.jpg" alt="Hot & Sour Soup" width="100" 
+              onerror="this.onerror=null;this.src='https://via.placeholder.com/100?text=Soup';" />
+          </td>
+          <td data-label="Edit"><a href="#">Edit</a></td>
+        </tr>
+        <tr>
+          <td data-label="Food Item No.">3</td>
+          <td data-label="Name">Lasagna Sandwich</td>
+          <td data-label="Description">Bacon, sour cream, mozzarella cheese and white bread</td>
+          <td data-label="Available?">Yes</td>
+          <td data-label="Vegetarian?">No</td>
+          <td data-label="Category">Sandwich</td>
+          <td data-label="Cuisine">Italian</td>
+          <td data-label="Image">
+            <img src="Lasagna Sanwhich.jpg" alt="Lasagna Sandwich" width="100" 
+              onerror="this.onerror=null;this.src='https://via.placeholder.com/100?text=Sandwich';" />
+          </td>
+          <td data-label="Edit"><a href="#">Edit</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <strong>About Us</strong><br />
+        We provide delicious meals and excellent service.
+      </div>
+      <div>
+        <strong>Contact</strong><br />
+        support@foodapp.com<br />
+        +1 234 567 8900
+      </div>
+      <div>
+        <strong>Follow Us</strong><br />
+        Twitter | Facebook | Instagram
+      </div>
+      <div>
+        <strong>© 2025 Food Ordering System</strong>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Add Food Item</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .form-box {
+      background: white;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .form-heading {
+      text-align: center;
+      color: #007BFF;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .styled-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .styled-form label {
+      display: flex;
+      flex-direction: column;
+      font-weight: 600;
+    }
+
+    .styled-form input[type="checkbox"] {
+      margin-bottom: 5px;
+    }
+
+    .form-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .form-buttons button {
+      flex: 1;
+      min-width: 100px;
+      padding: 10px 0;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      font-weight: 600;
+      background-color: #007BFF;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-buttons button[type="reset"] {
+      background-color: #6c757d;
+    }
+
+    .form-buttons button:hover {
+      background-color: #0056b3;
+    }
+
+    .form-buttons button[type="reset"]:hover {
+      background-color: #5a6268;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo" class="logo" />
+      <span class="app-name">Food Ordering System</span>
+    </div>
+    <div class="header-nav">
+      <button>Dashboard</button>
+      <button>Food Items</button>
+      <button>Logout</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-container">
+    <div class="form-box">
+      <h1 class="form-heading">Add New Food Item</h1>
+      <form action="/submit-food-item" method="post" class="styled-form">
+        <label for="foodName">Food Item Name:
+          <input type="text" id="foodName" name="foodName" required />
+        </label>
+
+        <label for="foodDesc">Food Item Description:
+          <textarea id="foodDesc" name="foodDesc" rows="4" required></textarea>
+        </label>
+
+        <label for="isAvailable">
+          <input type="checkbox" id="isAvailable" name="isAvailable" value="yes" />
+          Available
+        </label>
+
+        <label for="isVegetarian">
+          <input type="checkbox" id="isVegetarian" name="isVegetarian" value="yes" />
+          Vegetarian?
+        </label>
+
+        <label for="category">Category:
+          <select id="category" name="category" required>
+            <option value="">--Select Category--</option>
+            <option value="pasta">Pasta</option>
+            <option value="noodles">Noodles</option>
+            <option value="salad">Salad</option>
+          </select>
+        </label>
+
+        <label for="cuisine">Cuisine:
+          <select id="cuisine" name="cuisine" required>
+            <option value="">--Select Cuisine--</option>
+            <option value="italian">Italian</option>
+            <option value="korean">Korean</option>
+            <option value="soul-food">Soul Food</option>
+            <option value="vietnamese">Vietnamese</option>
+          </select>
+        </label>
+
+        <label for="imageUrl">Image URL:
+          <input type="url" id="imageUrl" name="imageUrl" />
+        </label>
+
+        <label for="isActive">
+          <input type="checkbox" id="isActive" name="isActive" value="yes" />
+          Active
+        </label>
+
+        <div class="form-buttons">
+          <button type="reset">Discard</button>
+          <button type="submit">Save</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div><strong>About Us</strong><br>We provide delicious meals</div>
+      <div><strong>Contact</strong><br>support@foodapp.com</div>
+      <div><strong>Follow Us</strong><br>Twitter, Facebook</div>
+      <div><strong>© 2025 FoodApp</strong></div>
+    </div>
+  </footer>
+
+</body>
+</html>
